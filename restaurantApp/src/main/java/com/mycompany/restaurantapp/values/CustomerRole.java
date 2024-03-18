@@ -1,5 +1,5 @@
 
-package values;
+package com.mycompany.restaurantapp.values;
 
 
 public enum CustomerRole { //enum se utiliza para hacer una lista de posibles valores a ordenar,
