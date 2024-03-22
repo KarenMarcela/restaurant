@@ -27,7 +27,19 @@ public class Menu {
                 foundDishes.add(dish.getName());
             }
         }
+        
         return foundDishes;
+    }
+    public void showMenu(){
+        for (DishType dishType : DishType.values()){
+            System.out.println("***--- "+dishType+" ---***");
+            
+        }
+    }
+    public void showBreakfast(){
+        for(Dish dish : dishList){
+            System.out.println(dish.getName());
+        }
     }
 
     

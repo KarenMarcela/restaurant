@@ -59,5 +59,7 @@ public class RestaurantApp {
         
         System.out.println("--------------------------");
         
+        menu.showMenu();
     }
+    
 }
