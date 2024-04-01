@@ -1,5 +1,6 @@
 
 package com.mycompany.restaurantapp.food;
+import com.mycompany.restaurantapp.values.CustomerRole;
 import com.mycompany.restaurantapp.values.DishType;
 import java.util.ArrayList;
 
@@ -18,7 +19,6 @@ public class Menu {
     public void addDish(Dish dish){
         this.dishList.add(dish);
     }
-    
     public ArrayList<String> getDishesPerType(DishType dishType){
         //ArrayList<Dish> foundDishes = new ArrayList<>();
         ArrayList<String> foundDishes = new ArrayList<>();
@@ -27,21 +27,25 @@ public class Menu {
                 foundDishes.add(dish.getName());
             }
         }
-        
         return foundDishes;
     }
     public void showMenu(){
-        for (DishType dishType : DishType.values()){
-            System.out.println("***--- "+dishType+" ---***");
+        for(DishType dishType : DishType.values()){
+            System.out.println("*** --- "+dishType+" ---***");
+            ArrayList<String> dishes = getDishesPerType(dishType);
+            for(String dish : dishes){
+                System.out.println(dish);
+            }
+        }
+    }
+    public void showPrice(){
+        final double priceStudent= 2.400;
+        System.out.println("***----- LISTA DE PRECIOS -----***");
+        for(CustomerRole prices : CustomerRole.values()){
+            System.out.println("***--- "+prices+" ---***");
             
         }
     }
-    public void showBreakfast(){
-        for(Dish dish : dishList){
-            System.out.println(dish.getName());
-        }
-    }
-
     
 }
     

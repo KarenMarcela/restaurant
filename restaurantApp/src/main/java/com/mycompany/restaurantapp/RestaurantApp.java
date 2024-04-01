@@ -6,7 +6,6 @@ import com.mycompany.restaurantapp.food.Menu;
 import com.mycompany.restaurantapp.people.Customer;
 import com.mycompany.restaurantapp.values.CustomerRole;
 import com.mycompany.restaurantapp.values.DishType;
-import java.util.ArrayList;
 
 public class RestaurantApp {
     
@@ -33,33 +32,10 @@ public class RestaurantApp {
         menu.addDish(dinner2);
         
         
-        System.out.println("--------------------------");
-        
-        System.out.println("Platos para el desayuno:");
-        ArrayList<String> breakfastDishes = menu.getDishesPerType(DishType.BREAKFAST);
-        for (String dish : breakfastDishes) {
-            System.out.println(dish);
-        }
-        
-        System.out.println("--------------------------");
-        
-        System.out.println("Platos para el almuerzo:");
-        ArrayList<String> lunchDishes = menu.getDishesPerType(DishType.LUNCH);
-        for (String dish : lunchDishes) {
-            System.out.println(dish);
-        }
-        
-        System.out.println("--------------------------");
-        
-        System.out.println("Platos para la comida:");
-        ArrayList<String> dinnerDishes = menu.getDishesPerType(DishType.DINNER);
-        for (String dish : dinnerDishes) {
-            System.out.println(dish);
-        }
-        
-        System.out.println("--------------------------");
+
         
         menu.showMenu();
+        menu.showPrice();
     }
     
 }
